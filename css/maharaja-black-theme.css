@@ -1,0 +1,219 @@
+/* ================================================================
+   THE MAHARAJA PERFUMES — OBSIDIAN / CHAMPAGNE GOLD EDITION
+   Page-specific skin, loaded after the original stylesheets.
+   ================================================================ */
+body.maharaja-black-page {
+  --bg: #080808;
+  --bg-2: #101010;
+  --surface: #141312;
+  --surface-2: #1d1a17;
+  --line: rgba(210,177,118,.17);
+  --line-2: rgba(210,177,118,.30);
+  --text: #f7f3ec;
+  --muted: #b6aea1;
+  --faint: #968a79;
+  --blue: #c5a265;
+  --blue-2: #d5b376;
+  --blue-soft: rgba(207,166,93,.12);
+  --v2-ink: #f7f3ec;
+  --v2-blue: #d5b376;
+  --v2-cyan: #e3c58b;
+  --v2-line: rgba(210,177,118,.18);
+  --color-bg-dark: #050505;
+  --color-bg-secondary: #0d0d0d;
+  --color-navy: #090909;
+  --color-blue-primary: #b99154;
+  --color-blue-bright: #d2aa67;
+  --color-cyan: #dfbc78;
+  --color-text-muted: #b6aea1;
+  --grad-brand: linear-gradient(125deg,#a07a3d,#d4ae6f 55%,#b9904e);
+  --grad: var(--grad-brand);
+  --shadow: 0 15px 35px rgba(0,0,0,.38);
+  --shadow-lg: 0 25px 70px rgba(0,0,0,.5);
+  background:#080808;
+  color:#bfb7ab;
+}
+body.maharaja-black-page .theme-dark {
+  --bg:#080808;
+  --bg-2:#101010;
+  --surface:#151311;
+  --surface-2:#1c1915;
+  --line:rgba(214,180,119,.19);
+  --line-2:rgba(214,180,119,.27);
+  --text:#f7f3ec;
+  --muted:#bbb1a2;
+  --faint:#958979;
+  --blue-2:#e0bd7c;
+  --blue-soft:rgba(215,177,103,.12);
+  background:#080808;
+}
+body.maharaja-black-page ::selection { background:#9f793e;color:#080808; }
+body.maharaja-black-page a:focus-visible,
+body.maharaja-black-page button:focus-visible {outline-color:#edcd95;}
+
+/* Matte black navigation, warm active indicators. */
+body.maharaja-black-page .site-header::before {
+  background:rgba(5,5,5,.81);border-color:rgba(228,190,123,.19);
+  box-shadow:0 14px 45px rgba(0,0,0,.32);
+  opacity:1;
+}
+body.maharaja-black-page .site-header.scrolled::before { background:rgba(6,6,6,.97); }
+body.maharaja-black-page .nav-links > a,
+body.maharaja-black-page .nav-item > .nav-btn,
+body.maharaja-black-page .nav-phone { color:#d1c8ba; }
+body.maharaja-black-page .nav-links > a.active {color:#f7f2e6;}
+body.maharaja-black-page .nav-links > a::before,
+body.maharaja-black-page .nav-item > .nav-btn::before {background:linear-gradient(90deg,#a67938,#edcd8d);}
+body.maharaja-black-page .nav-drop {background:rgba(12,11,10,.98);border-color:rgba(222,177,112,.18);}
+body.maharaja-black-page .nav-drop-intro {background:linear-gradient(145deg,#1b1711,#110f0d);}
+body.maharaja-black-page .nav-drop-intro small,
+body.maharaja-black-page .nav-drop a.all {color:#e0b976;}
+body.maharaja-black-page .nav-drop a::before {border-color:#cfa765;}
+body.maharaja-black-page .nav-drop a:hover {background:rgba(204,164,98,.10);}
+
+/* Champagne-gold primary actions instead of electric blue. */
+body.maharaja-black-page .btn--primary {
+  background:linear-gradient(110deg,#ba9151,#e2bc7c)!important;
+  border-color:#ceab70!important;
+  color:#17110a!important;
+  box-shadow:0 12px 32px rgba(180,130,59,.20)!important;
+  font-weight:750;
+}
+body.maharaja-black-page .btn--primary:hover {
+  background:linear-gradient(110deg,#d1a764,#f0d39b)!important;
+  box-shadow:0 14px 36px rgba(180,130,59,.30)!important;
+}
+body.maharaja-black-page .btn--ghost,
+body.maharaja-black-page .maharaja-hero-video .hero-actions .btn--ghost {
+  background:rgba(8,8,8,.52)!important;
+  color:#fff5e9!important;
+  border-color:rgba(230,206,162,.43)!important;
+}
+
+/* Keep the fullscreen video, but make it unmistakably BLACK cinematic. */
+body.maharaja-black-page .case-hero-v2.maharaja-hero-video {background:#020202!important;}
+body.maharaja-black-page .maharaja-hero-media {background-color:#060504!important;}
+body.maharaja-black-page .maharaja-hero-film {
+  filter:brightness(.86) contrast(1.11) saturate(.84);
+}
+body.maharaja-black-page .case-hero-v2.maharaja-hero-video::before {
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.97) 0%,rgba(0,0,0,.87) 24%,rgba(0,0,0,.60) 45%,rgba(0,0,0,.12) 75%,rgba(0,0,0,.08) 100%),
+    linear-gradient(0deg,rgba(0,0,0,.69),rgba(0,0,0,.07) 38%,rgba(0,0,0,.36))!important;
+}
+body.maharaja-black-page .maharaja-hero-breadcrumb .crumbs {color:#b5a898;}
+body.maharaja-black-page .maharaja-hero-breadcrumb .crumbs a {color:#cabfb0;}
+body.maharaja-black-page .maharaja-hero-video .eyebrow {color:#e2bf84!important;}
+body.maharaja-black-page .maharaja-hero-video .hero-v12-chips li {
+  background:rgba(5,5,5,.68)!important;border-color:rgba(223,183,111,.37)!important;color:#e8d8be!important;
+}
+body.maharaja-black-page .maharaja-scroll-cue {color:#dfc99f;}
+
+/* Dark case-study sections from top to bottom: no white or blue panels. */
+body.maharaja-black-page main {background:#080808;}
+body.maharaja-black-page .case-story-v2 {background:#090909!important;border-top:1px solid rgba(201,158,91,.12);}
+body.maharaja-black-page .section--light.case-deliverables-v2 {background:#0e0d0c!important;color:#bfb7a9;}
+body.maharaja-black-page .case-navigation-v2 {background:#080808!important;}
+body.maharaja-black-page .case-story-intro h2,
+body.maharaja-black-page .case-deliverables-v2 h2,
+body.maharaja-black-page .section-head h2 {color:#f5f0e7!important;}
+body.maharaja-black-page .case-story-card {
+  background:linear-gradient(145deg,#181613,#100f0d)!important;
+  border:1px solid rgba(217,174,103,.18)!important;
+  box-shadow:0 18px 36px rgba(0,0,0,.18);
+}
+body.maharaja-black-page .case-story-card--accent {
+  background:linear-gradient(145deg,#272018,#13110e)!important;
+  border-color:rgba(218,174,102,.33)!important;
+}
+body.maharaja-black-page .case-story-card h3 {color:#f6f1e8!important;}
+body.maharaja-black-page .case-story-card p,
+body.maharaja-black-page .case-story-card--accent p {color:#b8ae9f!important;}
+body.maharaja-black-page .case-story-card > span,
+body.maharaja-black-page .case-story-card--accent > span {color:#d9b378!important;}
+body.maharaja-black-page .case-deliverables-v2 .case-service-links {border-color:rgba(211,177,113,.20);}
+body.maharaja-black-page .case-deliverables-v2 .case-service-links a {
+  color:#efe7da!important;border-color:rgba(211,177,113,.20);transition:color .2s ease,padding-left .2s ease;
+}
+body.maharaja-black-page .case-service-links a:hover {color:#e6be80!important;padding-left:5px;}
+body.maharaja-black-page .case-outcome-panel {
+  background:linear-gradient(132deg,#282118,#151210 58%,#0c0b0a)!important;
+  border:1px solid rgba(222,179,109,.23)!important;
+  box-shadow:0 22px 58px rgba(0,0,0,.25)!important;
+}
+body.maharaja-black-page .case-outcome-panel h2 {color:#fff5e9!important;}
+body.maharaja-black-page .case-outcome-panel p {color:#bfb5a7!important;}
+body.maharaja-black-page .case-outcome-panel p a {color:#ecc489!important;}
+body.maharaja-black-page .case-outcome-panel .eyebrow {color:#e7c285!important;}
+body.maharaja-black-page .case-outcome-panel .eyebrow::before {background:#e2b875!important;}
+body.maharaja-black-page .case-process-v2 {
+  background:linear-gradient(155deg,#0d0c0b 0%,#050505 100%)!important;
+  border-top:1px solid rgba(214,177,112,.12);
+  border-bottom:1px solid rgba(214,177,112,.12);
+}
+body.maharaja-black-page .case-process-grid {border-color:rgba(212,176,114,.19);}
+body.maharaja-black-page .case-process-step {
+  background:rgba(255,255,255,.012);border-color:rgba(212,176,114,.19);
+}
+body.maharaja-black-page .case-process-step > span {color:#d6b072;}
+body.maharaja-black-page .case-process-step h3 {color:#f3eee5;}
+body.maharaja-black-page .case-process-step p {color:#a99e8f;}
+body.maharaja-black-page .case-nav-card {border:1px solid rgba(218,172,104,.17);background:#12110f;}
+body.maharaja-black-page .case-nav-card::after {
+  background:linear-gradient(180deg,rgba(0,0,0,.10),rgba(0,0,0,.92))!important;
+}
+
+/* Black/gold consultation banner—replace previous pink/orange/purple gradient. */
+body.maharaja-black-page .cta-section-v6 {
+  background:linear-gradient(180deg,#080808,#11100e 55%,#080808)!important;
+}
+body.maharaja-black-page .cta-band-v6 {
+  background:
+    radial-gradient(520px circle at 90% 65%,rgba(175,125,57,.18),transparent 70%),
+    linear-gradient(135deg,#1d1914 0%,#090909 70%)!important;
+  border:1px solid rgba(225,180,107,.31)!important;
+  box-shadow:0 30px 80px rgba(0,0,0,.42)!important;
+}
+body.maharaja-black-page .cta-band-v6::before {
+  background:linear-gradient(125deg,rgba(225,184,112,.10),transparent 42%)!important;
+}
+body.maharaja-black-page .cta-band-v6 h2 {color:#fff6e8!important;}
+body.maharaja-black-page .cta-band-v6 .eyebrow {color:#e6c083!important;}
+body.maharaja-black-page .cta-band-v6 .lead {color:#c3b8a7!important;}
+body.maharaja-black-page .cta-band-v6 .cta-note {color:#a99d8b!important;}
+body.maharaja-black-page .cta-band-v6 .btn--light {
+  background:linear-gradient(120deg,#d5af70,#ebc88d)!important;
+  border-color:#dab576!important;color:#1a1309!important;
+}
+body.maharaja-black-page .cta-art-v6 {border-color:rgba(223,180,108,.24);background:radial-gradient(circle,rgba(200,158,88,.12),transparent 60%);}
+body.maharaja-black-page .cta-orbit {border-color:rgba(224,184,115,.36);}
+body.maharaja-black-page .cta-center-mark {background:rgba(19,16,11,.73);border-color:rgba(226,186,117,.30);}
+body.maharaja-black-page .cta-mini-card {background:rgba(24,20,15,.83);border-color:rgba(218,176,107,.30);}
+body.maharaja-black-page .cta-mini-card span {color:#ccbda6;}
+body.maharaja-black-page .site-footer {
+  background:linear-gradient(180deg,#0a0908,#030303)!important;
+  border-top:1px solid rgba(222,180,110,.17);
+}
+body.maharaja-black-page .foot-cta-kicker {color:#dabb83;}
+@media(max-width:980px){
+  body.maharaja-black-page .case-hero-v2.maharaja-hero-video::before {
+    background:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.71) 65%,rgba(0,0,0,.36)),
+               linear-gradient(0deg,rgba(0,0,0,.72),transparent 45%,rgba(0,0,0,.28))!important;
+  }
+}
+@media(max-width:600px){
+  body.maharaja-black-page .case-hero-v2.maharaja-hero-video::before {
+    background:linear-gradient(90deg,rgba(0,0,0,.84),rgba(0,0,0,.68)),
+               linear-gradient(0deg,rgba(0,0,0,.85),transparent 48%,rgba(0,0,0,.44))!important;
+  }
+  body.maharaja-black-page .nav-links {background:#0b0a09;}
+}
+
+/* Consistent black-and-gold sticky contact controls on small screens. */
+body.maharaja-black-page .mobile-action-bar {
+  background:rgba(5,5,5,.97);border-top:1px solid rgba(217,175,108,.29);
+}
+body.maharaja-black-page .mobile-action-bar .mab-item {color:#dfd3c2;}
+body.maharaja-black-page .mobile-action-bar .mab-item--primary {
+  color:#151009;background:linear-gradient(120deg,#be9554,#e3be7d)!important;
+}

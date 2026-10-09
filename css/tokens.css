@@ -1,0 +1,104 @@
+/* ============================================================
+   TECH JOINT SOLUTION — BRAND TOKENS
+   The single source of truth for colour, type and geometry.
+   Every colour below is taken from the official logo artwork.
+   Change a value here and the whole website follows.
+   ============================================================ */
+
+:root{
+  /* ---- Official brand colours (from the logo) ---- */
+  --color-bg-dark:#070A12;
+  --color-bg-secondary:#0D1320;
+  --color-navy:#071B3F;
+  --color-blue-dark:#0A3180;
+  --color-blue-primary:#006BE6;
+  --color-blue-bright:#008FF0;
+  --color-cyan:#00B7F4;
+  --color-bg-light:#F4F8FC;
+  --color-white:#FFFFFF;
+  --color-text-muted:#9CA8BA;
+
+  /* ---- Brand gradient ---- */
+  --grad-brand:linear-gradient(135deg,#0A3180 0%,#006BE6 48%,#00B7F4 100%);
+  /* Alias kept because components reference --grad (gradient text, icon
+     chips, avatars, the 404 numeral). Without it they render invisible. */
+  --grad:var(--grad-brand);
+  --grad-brand-soft:linear-gradient(135deg,rgba(10,49,128,.9),rgba(0,183,244,.75));
+
+  /* ---- Semantic aliases ----
+     DEFAULT = BRIGHT THEME. The site reads light and clean; premium dark
+     is applied deliberately via .theme-dark (hero, header, footer, and
+     .section--dark) so the two play against each other. To make the whole
+     site dark again, swap these values with the .theme-dark block below. */
+  --bg:var(--color-white);
+  --bg-2:var(--color-bg-light);
+  --surface:#FFFFFF;
+  --surface-2:#EEF4FB;
+  --line:#DCE6F2;
+  --line-2:#C6D6E9;
+  --blue:var(--color-blue-primary);
+  --blue-2:var(--color-blue-primary);   /* cyan is illegible on white */
+  --blue-soft:rgba(0,107,230,.10);
+  --text:var(--color-navy);
+  --muted:#3F4E63;
+  --faint:#5C6B82;
+  --link-hover:var(--color-blue-dark);
+  --shadow:0 10px 30px rgba(7,27,63,.09);
+  --shadow-lg:0 22px 60px rgba(7,27,63,.14);
+  --glow:0 8px 24px rgba(0,107,230,.28);
+
+  /* ---- Light-section palette (kept for components that opt in) ---- */
+  --l-bg:var(--color-bg-light);
+  --l-surface:#FFFFFF;
+  --l-line:#DCE6F2;
+  --l-text:#071B3F;
+  --l-muted:#3F4E63;
+  --l-faint:#5C6B82;
+
+  /* ---- State colours (only non-blue hues allowed) ---- */
+  --ok:#12B76A;
+  --err:#E5484D;
+
+  /* ---- Type ---- */
+  --font-head:"Space Grotesk","Inter",system-ui,sans-serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,"SF Mono",Consolas,monospace;
+
+  /* ---- Geometry: medium radii echoing the logo's modular blocks ---- */
+  --r-sm:6px;
+  --r:10px;
+  --r-lg:14px;
+  --r-xl:20px;
+
+  /* ---- Elevation & motion ---- */
+  --shadow-light:0 10px 30px rgba(7,27,63,.09);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --wrap:1180px;
+  --header-h:76px;
+}
+
+/* ============================================================
+   PREMIUM DARK SCOPE
+   Applied to the hero, header, footer and .section--dark.
+   Rebinding the same aliases means every component inside —
+   including inline style="color:var(--muted)" — follows.
+   ============================================================ */
+.theme-dark{
+  --bg:var(--color-bg-dark);
+  --bg-2:var(--color-bg-secondary);
+  --surface:#0E1626;
+  --surface-2:#111C31;
+  --line:rgba(156,168,186,.16);
+  --line-2:rgba(156,168,186,.28);
+  --blue-2:var(--color-cyan);
+  --blue-soft:rgba(0,107,230,.15);
+  --text:var(--color-white);
+  --muted:var(--color-text-muted);
+  --faint:#7A8AA0;
+  --link-hover:var(--color-white);
+  --shadow:0 12px 34px rgba(3,8,20,.5);
+  --shadow-lg:0 28px 70px rgba(3,8,20,.65);
+  --glow:0 8px 26px rgba(0,107,230,.4);
+  background:var(--bg);
+  color:var(--muted);
+}

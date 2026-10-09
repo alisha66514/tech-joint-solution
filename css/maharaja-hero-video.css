@@ -1,0 +1,107 @@
+/* The Maharaja Perfumes — standalone fullscreen cinematic hero override.
+   Loaded AFTER site.css and v11.css; only affects this portfolio page. */
+.case-hero-v2.maharaja-hero-video{
+  position:relative; isolation:isolate; overflow:hidden;
+  min-height:100vh; min-height:100svh;
+  padding:0!important; background:#080706!important;
+}
+.case-hero-v2.maharaja-hero-video .maharaja-hero-media{
+  position:absolute;inset:0;z-index:0;overflow:hidden;
+  background:#18100b url('../assets/videos/maharaja-woman-perfume-poster.jpg') center / cover no-repeat;
+}
+.case-hero-v2.maharaja-hero-video .maharaja-hero-film{
+  width:100%;height:100%;max-width:none;display:block;object-fit:cover;object-position:center center;
+}
+/* Scrim tuned to keep heading legible over both the bottle and woman shots. */
+.case-hero-v2.maharaja-hero-video::before{
+  content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(90deg,rgba(5,6,10,.91) 0%,rgba(7,7,10,.85) 27%,rgba(7,7,11,.53) 55%,rgba(4,4,7,.12) 100%),
+    linear-gradient(0deg,rgba(3,3,6,.70) 0%,transparent 25%,rgba(3,3,6,.14) 80%,rgba(3,3,6,.42) 100%)!important;
+}
+.case-hero-v2.maharaja-hero-video::after{
+  height:2px!important; background:linear-gradient(90deg,transparent,#c59d50,transparent)!important;
+}
+.case-hero-v2.maharaja-hero-video .case-hero-glow,
+.case-hero-v2.maharaja-hero-video .case-hero-photo-v9{display:none!important}
+.case-hero-v2.maharaja-hero-video .maharaja-hero-breadcrumb{
+  position:absolute;z-index:4;top:calc(var(--header-h,84px) + 36px);left:0;right:0;
+}
+.maharaja-hero-breadcrumb .crumbs{color:#d3c6b1;font-size:.79rem}
+.maharaja-hero-breadcrumb .crumbs a{color:#e8dcc6}
+.maharaja-hero-breadcrumb .crumbs .cur{color:#fff}
+.case-hero-v2.maharaja-hero-video .case-hero-grid{
+  position:relative;z-index:3;box-sizing:border-box;
+  display:flex!important;justify-content:flex-start;align-items:center!important;
+  min-height:100vh;min-height:100svh;
+  width:min(var(--wrap),92vw);
+  padding:calc(var(--header-h,84px) + 96px) 0 116px!important;
+  gap:0!important;
+}
+.case-hero-v2.maharaja-hero-video .case-hero-copy{
+  width:min(680px,61%)!important;max-width:680px!important;position:relative;z-index:3;
+}
+.case-hero-v2.maharaja-hero-video h1{
+  max-width:12ch!important;
+  font-size:clamp(3.1rem,5.4vw,5.75rem)!important;
+  line-height:1.02!important;letter-spacing:-.055em;
+  margin:14px 0 20px;color:#fff;
+  text-shadow:0 6px 32px rgba(0,0,0,.45);
+}
+.case-hero-v2.maharaja-hero-video .eyebrow{color:#f1c978!important;letter-spacing:.11em}
+.case-hero-v2.maharaja-hero-video .eyebrow::before{color:#c39b53}
+.case-hero-v2.maharaja-hero-video .case-hero-sub{color:#fff!important;font-weight:600;font-size:1.13rem}
+.case-hero-v2.maharaja-hero-video .hero-v12-chips li{
+  background:rgba(9,10,15,.5);border-color:rgba(243,201,120,.35);
+  color:#f2e9d7;backdrop-filter:blur(10px);
+}
+.case-hero-v2.maharaja-hero-video .hero-actions{position:relative;z-index:3;margin-top:24px;gap:12px}
+.case-hero-v2.maharaja-hero-video .hero-actions .btn--ghost{
+  background:rgba(8,9,15,.38);border-color:rgba(255,255,255,.35);color:#fff;
+  backdrop-filter:blur(8px);
+}
+.case-hero-v2.maharaja-hero-video .maharaja-scroll-cue{
+  position:absolute;z-index:4;bottom:28px;left:50%;transform:translateX(-50%);
+  display:flex;align-items:center;gap:10px;color:#f5dec0;
+  font-size:.73rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  text-shadow:0 1px 9px #000;white-space:nowrap;
+}
+.maharaja-scroll-cue:hover{color:#fff}
+.maharaja-scroll-line{width:25px;height:1px;background:#d6ad67;display:inline-block}
+@media(max-width:980px){
+  .case-hero-v2.maharaja-hero-video .case-hero-copy{width:min(620px,80%)!important}
+  .case-hero-v2.maharaja-hero-video .case-hero-grid{
+    display:flex!important;align-items:center!important;
+    padding:calc(var(--header-h,76px) + 92px) 0 108px!important;
+  }
+  .case-hero-v2.maharaja-hero-video::before{
+    background:linear-gradient(90deg,rgba(4,5,8,.92),rgba(6,5,9,.72) 60%,rgba(6,5,9,.28)),
+      linear-gradient(0deg,rgba(4,4,8,.68),transparent 37%,rgba(4,4,8,.36))!important;
+  }
+}
+@media(max-width:600px){
+  .case-hero-v2.maharaja-hero-video{min-height:100svh}
+  .case-hero-v2.maharaja-hero-video .maharaja-hero-film{object-position:64% center}
+  .case-hero-v2.maharaja-hero-video .maharaja-hero-media{background-position:64% center}
+  .case-hero-v2.maharaja-hero-video .maharaja-hero-breadcrumb{top:calc(var(--header-h,76px) + 22px)}
+  .case-hero-v2.maharaja-hero-video .case-hero-grid{
+    min-height:100svh;padding:calc(var(--header-h,76px) + 110px) 0 95px!important;
+    align-items:center!important;
+  }
+  .case-hero-v2.maharaja-hero-video .case-hero-copy{width:100%!important;max-width:100%!important}
+  .case-hero-v2.maharaja-hero-video h1{font-size:clamp(2.5rem,10.5vw,4rem)!important;max-width:12ch!important}
+  .case-hero-v2.maharaja-hero-video .case-hero-sub{font-size:1rem}
+  .case-hero-v2.maharaja-hero-video .hero-actions{flex-direction:column;align-items:stretch;margin-top:19px}
+  .case-hero-v2.maharaja-hero-video .hero-actions .btn{width:100%;justify-content:center}
+  .case-hero-v2.maharaja-hero-video::before{
+    background:linear-gradient(90deg,rgba(4,5,10,.78),rgba(4,5,10,.64)),
+      linear-gradient(0deg,rgba(3,3,7,.80),transparent 48%,rgba(3,3,7,.49))!important;
+  }
+  .case-hero-v2.maharaja-hero-video .maharaja-scroll-cue{bottom:24px}
+}
+@media(max-width:370px){
+  .case-hero-v2.maharaja-hero-video .case-hero-grid{padding-top:calc(var(--header-h,76px) + 95px)!important}
+  .case-hero-v2.maharaja-hero-video h1{font-size:2.35rem!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .case-hero-v2.maharaja-hero-video .maharaja-hero-film{display:none}
+}
